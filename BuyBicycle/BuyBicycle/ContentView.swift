@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
         List(Bikes){ Bicycle in
-            NavigationLink(destination: View2(Bicycle: Bicycle)){
+            NavigationLink(destination: View2(Bicycle: Bicycle).environmentObject(Details())){
             BicycleRow(Bicycle: Bicycle)
             }
         }
@@ -43,13 +43,11 @@ struct BicycleRow: View {
                 .font(.system(size: 25))
                 .foregroundColor(.white)
             
-            
             Image(Bicycle.imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 60, height: 60)
+                .frame(width: 80, height: 80)
                 .background(Color .white)
-                .clipShape(Circle())
                 .padding()
             
         }

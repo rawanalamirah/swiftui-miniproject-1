@@ -14,6 +14,7 @@
 		629470F7259DB8B200769AEB /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629470F6259DB8B200769AEB /* View2.swift */; };
 		629470FA259DCEA300769AEB /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629470F9259DCEA300769AEB /* View3.swift */; };
 		62947103259F552300769AEB /* Bicycles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62947102259F552300769AEB /* Bicycles.swift */; };
+		6294710A259F87CE00769AEB /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62947109259F87CE00769AEB /* Details.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		629470F6259DB8B200769AEB /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		629470F9259DCEA300769AEB /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
 		62947102259F552300769AEB /* Bicycles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicycles.swift; sourceTree = "<group>"; };
+		62947109259F87CE00769AEB /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				629470E8259D228A00769AEB /* ContentView.swift */,
 				62947102259F552300769AEB /* Bicycles.swift */,
 				629470F6259DB8B200769AEB /* View2.swift */,
+				62947109259F87CE00769AEB /* Details.swift */,
 				629470F9259DCEA300769AEB /* View3.swift */,
 				629470EA259D228F00769AEB /* Assets.xcassets */,
 				629470EF259D228F00769AEB /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				629470FA259DCEA300769AEB /* View3.swift in Sources */,
 				62947103259F552300769AEB /* Bicycles.swift in Sources */,
+				6294710A259F87CE00769AEB /* Details.swift in Sources */,
 				629470E9259D228A00769AEB /* ContentView.swift in Sources */,
 				629470F7259DB8B200769AEB /* View2.swift in Sources */,
 				629470E7259D228A00769AEB /* BuyBicycleApp.swift in Sources */,
