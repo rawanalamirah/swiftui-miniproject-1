@@ -19,12 +19,12 @@ struct View2TextFieldModifier: ViewModifier {
 
 struct View2: View {
     let Bicycle: Bicycle
-    let detail = Details()
-    @EnvironmentObject var details: Details
-
-    
+    let details: Details1
+    @State var fullName = ""
+    @State var phoneNumber = ""
+    @State var noOfBikes = 0
+    @State var noOfHours = 0
     var body: some View{
-        NavigationView{
             VStack{
                 Image(Bicycle.imageName)
                     .resizable()
@@ -32,32 +32,32 @@ struct View2: View {
                     .frame(width: 250, height: 250)
                     .clipped()
 
-                TextField("Full Name", text: self.$details.name)
+                TextField("Full Name", text: $fullName)
                     .modifier(View2TextFieldModifier())
                     .disableAutocorrection(true)
                     .autocapitalization(.words)
                 
-                TextField("Phone Number", text: self.$details.number)
+                TextField("Phone Number", text: $phoneNumber)
                     .modifier(View2TextFieldModifier())
                 
                 
-                Stepper("No. of Hours: \(self.details.hours)", value: self.$details.hours)
+                Stepper("No. of Hours: \(noOfHours)", value: $noOfHours)
                     .modifier(View2TextFieldModifier())
                 
-                Stepper("No. of Bikes: \(self.details.bikes)", value: self.$details.bikes)
+                Stepper("No. of Bikes: \(noOfBikes)", value: $noOfBikes)
                     .modifier(View2TextFieldModifier())
                 
                 Spacer()
                 
-                Text("\(self.details.bikes * 3*self.details.hours)")
+                Text("\(noOfBikes * 3*noOfHours)")
                 
                 Text("Total Amount")
                     .font(.body)
                     .fontWeight(.regular)
                 
-                if ((self.details.bikes) != 0) && self.details.hours > 0 {
+                if ((noOfBikes) != 0) && noOfHours > 0 {
                     NavigationLink(
-                        destination: View3().environmentObject(Details()),
+                        destination: View3(details: Details1(name: fullName, number: phoneNumber, hours: noOfHours, bikes: noOfBikes)) ,
                         label: {
                             Text("Continue")
                                 .font(.system(size: 20))
@@ -69,18 +69,16 @@ struct View2: View {
                     Spacer()
                     
                     
-                }
+                
                 
             }
-        }
+            }
     }
+    
     
     struct View2_Previews: PreviewProvider {
         static var previews: some View {
-            View2(Bicycle: Bikes[0])
-                .padding(.bottom, 80.0)
-                .environmentObject(Details())
-            
+            View2(Bicycle: Bikes[0], details: Details1( name: "Test", number: "Test", hours: 0, bikes: 0))
             
             
         }

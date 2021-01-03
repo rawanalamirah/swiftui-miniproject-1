@@ -5,12 +5,15 @@
 //  Created by rawan alamirah on 1/1/21.
 //
 
-import Foundation
+import SwiftUI
 
-class Details: ObservableObject{
-    @Published var name: String = ""
-    @Published var number: String = ""
-    @Published var hours: Int = 0
-    @Published var bikes: Int = 0
-
+struct Details1: Identifiable {
+     var id = UUID()
+ 
+     @State var name: String = ""
+     @State var number: String = ""
+     @State var hours: Int = 0
+     @State var bikes: Int = 0
 }
+
+

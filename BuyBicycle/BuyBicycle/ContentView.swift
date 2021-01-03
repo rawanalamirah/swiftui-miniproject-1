@@ -11,11 +11,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
         List(Bikes){ Bicycle in
-            NavigationLink(destination: View2(Bicycle: Bicycle).environmentObject(Details())){
+        
+            NavigationLink(
+                destination: View2(Bicycle: Bicycle, details: Details1()))
+            {
             BicycleRow(Bicycle: Bicycle)
             }
+            
         }
         .navigationBarTitle("Rent a Bike")
+        
+        
         
         }
     }
